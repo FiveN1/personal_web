@@ -1,5 +1,4 @@
-# personal_web
-Stránka o mně
+# Personal Web
+...
 
-
-https://fiven1.github.io/personal_web/
+[Website link](https://fiven1.github.io/personal_web/)
