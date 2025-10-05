@@ -4,13 +4,21 @@
   src: url("res/font/ProggyClean/ProggyClean.ttf"); /* url of the font */
 }
 
+@font-face {
+  font-family: Helvetica; /* set name */
+  src: url("res/font/Helvetica/Helvetica.ttf"); /* url of the font */
+}
+
 body {
 
-    background-color: #3378a5;
+    background-color: #000000;
     /* background-image: url("res/image/field1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%; */
+
+    background: radial-gradient(circle at top left, rgb(17, 32, 114) 1%, transparent 50%), radial-gradient(circle at bottom left, rgb(13, 83, 43) 5%, black 50%)
+
 }
 
 .bg_image {
@@ -20,7 +28,7 @@ body {
     background-size: cover;
     background-position: 50% 50%;
     */
-    filter: blur(8px);
+    /* filter: blur(8px); */
 
     width:      100%;
     height:     100%; 
@@ -52,17 +60,44 @@ p {
     font-size: 1.6em;
 }
 
-
+body {
+    margin: 0px;
+}
 
 .title_bar {
-    border: 10px outset rgb(255, 255, 255);
-    background-color: rgba(0, 26, 255, 0.8);
+
     width: auto;
-    height: 100px;
-    padding: 10px;
-    margin-left:auto;
-    margin-right:auto;
+
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+
     text-align: left;
+    
+    /* outline */
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: rgba(255, 255, 255, 0.437);
+    outline-offset: 0px;
+    
+    /* radius */
+    border-radius: 4px 4px 4px 4px;
+
+    /* color */
+    background-color: rgb(255, 255, 255, 0.2);
+
+    /* shadow */
+    box-shadow: -2px -4px 4px rgba(255, 255, 255, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.5);
+
+    /* blur */
+    backdrop-filter: blur(8px);
+
+    /* gradient */
+    background: radial-gradient(circle at top left, transparent 50%, rgba(255, 255, 255, 0.2) 100%), url("res/image/np_demo_lion.png") 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
 }
 /*
 *
@@ -72,16 +107,54 @@ p {
 .about {
 
     width: auto;
-    padding: 10px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
 
     text-align: left;
-    outline: 2px solid blue;
+    
+    /* outline */
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: rgba(255, 255, 255, 0.437);
     outline-offset: 0px;
-
-    /* border-radius: 25px; */
+    
+    /* radius */
+    border-radius: 4px;
 
     /* color */
-    background-color: rgb(0, 0, 0);
+    /*background-color: rgb(255, 255, 255, 0.2);*/
+
+    /* shadow */
+    /*box-shadow: -2px -4px 4px rgba(255, 255, 255, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.5);*/
+
+    /* blur */
+    /*backdrop-filter: blur(8px);*/
+
+    /* gradient */
+    background: radial-gradient(circle at top left, transparent 50%, rgba(255, 255, 255, 0.2) 100%), url("res/image/np_demo_lion.png") 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.tab {
+    /*
+    transform: rotate(15deg);
+    transform: translate(100px);
+    transform-origin: top right;
+    */
+
+    width:      100px;
+    height:     1000px; 
+    top:        0px; 
+    left:       -104px; 
+    position:   fixed;
+
+    background-color: red;
+
+    border-radius: 8px;
 }
 
 /*
@@ -99,10 +172,12 @@ p {
     width: auto;
     /* padding: 10px; */
 
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 4%;
+    margin-right: 4%;
 
     text-align: left;
+
+    
 
 }
 
@@ -111,22 +186,38 @@ p {
     /* flex property */
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2px;
 
     /* other*/
 
     width: auto;
-    padding: 10px;
+    padding: 16px;
 
     text-align: left;
 
-    /* border-radius: 25px; */
 
-    outline: 2px solid blue;
+
+
+    /* outline */
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: rgba(255, 255, 255, 0.437);
     outline-offset: 0px;
+    
+    /* radius */
+    border-radius: 8px;
 
     /* color */
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255, 0.2);
+
+    /* shadow */
+    box-shadow: -2px -4px 4px rgba(255, 255, 255, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.5);
+
+    /* blur */
+    backdrop-filter: blur(8px);
+
+    /* gradient */
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.414), transparent 100%);
 }
 
 /*
@@ -148,25 +239,249 @@ p {
 
 /*
 *
+* KARTY
 *
 */
 
-.code_projects {
+.card {
+    /* flex*/
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 
+    /*
+    * Visual
+    */
+
     width: auto;
-    padding: 10px;
+
+    padding: 0px;
 
     text-align: left;
-    outline: 2px solid blue;
+    
+    /* outline */
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: rgb(255, 255, 255);
+    outline-offset: 0px;
+    
+    /* radius */
+    border-radius: 4px;
+
+    /* background */
+    background-color: #070227;
+
+    /* shadow */
+    box-shadow: -1px -2px 2px rgba(255, 255, 255, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.5);
+
+
+    background-image: url("res/image/np_lion1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+
+    /*
+    background: radial-gradient(circle at top left, transparent 50%, rgba(255, 255, 255, 0.2) 100%), url("res/image/np_demo_lion.png") 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    */
+
+}
+
+.card_tab {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    border-radius: 4px 4px 0px 0px;
+
+    padding-right: 16px;
+    padding-left: 16px;
+
+    /*background: radial-gradient(circle at top left, rgb(183, 183, 183) 5%, rgb(77, 77, 77) 100%);*/
+
+
+    box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.5);
+
+    backdrop-filter: blur(8px);
+    
+
+}
+
+.card_tab_text {
+    color: #ffffff;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.6em;
+
+    transform: rotate(0deg);
+
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    white-space:nowrap;
+}
+
+
+
+.card_tab_button {
+
+    padding-right: 32px;
+    padding-left: 32px;
+    
+
+    border: 1px;
+
+    border-radius: 4px;
+    background-color: #49df17;;
+    
+    text-decoration: none;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    /* outline */
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: rgb(255, 255, 255);
     outline-offset: 0px;
 
-    /* border-radius: 25px; */
+    /* shadow */
+    box-shadow: -1px -2px 2px rgba(255, 255, 255, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
 
-    /* color */
-    /* background-color: rgba(255, 255, 255, 0.429); */
+.card_tab_button:hover {
+    transform: scale(1.1);
+    -webkit-transition: transform 0.1s;
+    transition: transform 0.1s;
+}
+
+.card_content {
+    /* mozna radsi flex ...*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    
+    /*grid-template-columns: 50% 50%;*/
+
+    padding: 16px;
+}
+
+.card_postcard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: rgba(255, 255, 255, 0.437);
+    outline-offset: 0px;
+
+    padding: 16px;
+
+    border-radius: 4px;
+}
+
+.card_postcard_image_test {
+    background-color: aqua;
+
+    width: 100px;
+    height: 100px;
+}
+
+/*
+*
+* MINIKARTY
+*
+*/
+
+.minicard {
+    /* velikost 3:4 */
+    width: 268px;
+    height: 368px;
+
+    padding: 16px;
+
+    /* outline */
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: rgb(255, 255, 255);
+    outline-offset: 0px;
+    
+    /* radius */
+    border-radius: 16px;
+
+    /* background */
+    background-color: #0000004d;
+
+    /* shadow */
+    box-shadow: -1px -2px 2px rgba(255, 255, 255, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.5);
+
+
+    backdrop-filter: blur(8px);
+
+    transform: scale(1.0);
+    -webkit-transition: transform 0.1s;
+    transition: transform 0.1s;
+}
+
+.minicard:hover {
+    transform: scale(1.05);
+    -webkit-transition: transform 0.1s;
+    transition: transform 0.1s;
+}
+
+
+.minicard_center {
+    background-color: aqua;
+
+    width: 100%;
+    height: 100%;
+
+    /* outline */
+    /*
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: rgb(255, 255, 255);
+    outline-offset: 0px;
+    */
+    
+    /* radius */
+    border-radius: 4px;
+
+    /* background */
+    background-color: #2c2c2c;
+
+    /* shadow */
+    /*box-shadow: -1px -2px 2px rgba(255, 255, 255, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.5);*/
+
+    /* background image */
+    background-image: url("res/image/field1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.minicard_center .i0 {
+    background-image: url("res/image/field1.jpg");
+}
+
+.minicard_center .i1 {
+    background-image: url("res/image/np_demo_lion.png");
+}
+
+.minicard_center .i2 {
+    background-image: url("res/image/np_glitch1.png");
 }
 
 .art_projects {
@@ -180,6 +495,8 @@ p {
     outline: 2px solid blue;
     outline-offset: 0px;
 
+    
+
     /* border-radius: 25px; */
 
     /* color */
@@ -191,6 +508,47 @@ p {
 *
 */
 
+/*
+*
+* HOME
+*
+*/
+
+.home {
+    top: 0px;
+    width: auto;
+    height: 100vh;
+    margin-bottom: 16px;
+
+    background-color: #000000;
+
+    border-radius: 0% 0% 4% 4%;
+
+    /* outline */
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: rgb(255, 255, 255);
+    outline-offset: 0px;
+
+    /* shadow */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+
+
+    
+    padding: 16px;
+
+    text-align: left;
+
+}
+
+
+/*
+*
+*
+*/
+
+
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -200,13 +558,42 @@ p {
 
     padding: 20px;
 
-    background-color: rgb(0, 0, 0);
 
     text-align: left;
     outline: 2px solid blue;
     outline-offset: 0px;
 
-    /* border-radius: 25px; */
 
 
+    /* outline */
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: rgba(255, 255, 255, 0.437);
+    outline-offset: 0px;
+    
+    /* radius */
+    border-radius: 8px;
+
+    /* color */
+    background-color: rgb(255, 255, 255, 0.2);
+
+    /* shadow */
+    box-shadow: -2px -4px 4px rgba(255, 255, 255, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.5);
+
+    /* blur */
+    backdrop-filter: blur(8px);
+
+    /* gradient */
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.414), transparent 100%);
+
+
+}
+
+.gl_canvas {
+    width:      20%;
+    height:     20%; 
+    z-index:    -1;
+    top:        0; 
+    left:       0; 
+    position:   fixed; 
 }
