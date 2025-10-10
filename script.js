@@ -10,6 +10,41 @@ function setStyle() {
   //document.getElementsByTagName('card_postcard_image_test')[0].style.backgroundColor = 'green';
 }
 
+/*
+* ANIMATION ON VIEW
+* https://www.youtube.com/watch?v=iXlkRhjnnpk
+*
+*/
+document.addEventListener("DOMContentLoaded", () => {
+
+	// Use Intersection Observer to determine if objects are within the viewport
+	const observer = new IntersectionObserver(entries => {
+	  entries.forEach(entry => {
+		if (entry.isIntersecting) {
+		  entry.target.classList.add('in-view');
+		  return;
+		}
+		entry.target.classList.remove('in-view');
+	  });
+	});
+
+	// Get all the elements with the .animate class applied
+	const allAnimatedElements = document.querySelectorAll('.animate');
+
+	// Add the observer to each of those elements
+	allAnimatedElements.forEach((element) => observer.observe(element));
+
+}); 
+
+
+/*
+const element = document.querySelector('.card');
+const observer = new IntersectionObserver(entries => {
+  element.classList.toggle( 'animation', entries[0].isIntersecting );
+});
+
+observer.observe( element );
+*/
 
 /*
 main();

@@ -17,8 +17,8 @@ body {
     background-size: cover;
     background-position: 50% 50%; */
 
-    background: radial-gradient(circle at top left, rgb(17, 32, 114) 1%, transparent 50%), radial-gradient(circle at bottom left, rgb(13, 83, 43) 5%, black 50%)
-
+    /*background: radial-gradient(circle at top left, rgb(17, 32, 114) 1%, transparent 50%), radial-gradient(circle at bottom left, rgb(13, 83, 43) 5%, black 50%)
+*/
 }
 
 .bg_image {
@@ -172,10 +172,14 @@ body {
     width: auto;
     /* padding: 10px; */
 
-    margin-left: 4%;
-    margin-right: 4%;
+    
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    
+    /*max-width: 75vw;*/
 
     text-align: left;
+    align-self: center;
 
     
 
@@ -243,6 +247,11 @@ body {
 *
 */
 
+@keyframes card_animation {
+    from {opacity: 0.0};
+    to {opacity: 1.0};
+}
+
 .card {
     /* flex*/
     display: flex;
@@ -260,10 +269,12 @@ body {
     text-align: left;
     
     /* outline */
+    /*
     outline-style: solid;
     outline-width: 1px;
     outline-color: rgb(255, 255, 255);
     outline-offset: 0px;
+    */
     
     /* radius */
     border-radius: 4px;
@@ -289,6 +300,44 @@ body {
     */
 
 }
+
+/* kdyz je in view */
+.card.in-view {
+    animation: card_animation 1s ease;
+}
+
+/*
+.card.start {
+    transform: scale(1.2);
+    -webkit-transition: transform 1.0s;
+    transition: transform 1.0s;
+}
+*/
+
+/*
+@keyframes play {
+    100% { background: red; }
+}
+
+.animation {
+  animation: play 2.8s steps(15);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.card:after {
+  position: fixed;
+  content: 'Keep scrolling!';
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transform: translate(-50%,-50%);
+  transition: opacity .4s;
+}
+.card:not(.animation):after {
+  opacity: 1;
+}
+*/
 
 .card_tab {
 
@@ -410,13 +459,15 @@ body {
     width: 268px;
     height: 368px;
 
-    padding: 16px;
+    padding: 0px;
 
     /* outline */
+    /*
     outline-style: solid;
     outline-width: 1px;
     outline-color: rgb(255, 255, 255);
     outline-offset: 0px;
+    */
     
     /* radius */
     border-radius: 16px;
@@ -446,7 +497,7 @@ body {
     background-color: aqua;
 
     width: 100%;
-    height: 100%;
+    height: 50%;
 
     /* outline */
     /*
@@ -514,21 +565,29 @@ body {
 *
 */
 
+
+/*
+* gradient do stracena?
+* - nebude vidět spodní hranice.
+*
+*/
 .home {
     top: 0px;
     width: auto;
     height: 100vh;
     margin-bottom: 16px;
 
-    background-color: #000000;
+    background-color: #181818;
 
-    border-radius: 0% 0% 4% 4%;
+    /*border-radius: 0% 0% 4% 4%;*/
 
     /* outline */
+    /*
     outline-style: solid;
     outline-width: 1px;
     outline-color: rgb(255, 255, 255);
     outline-offset: 0px;
+    */
 
     /* shadow */
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
@@ -539,6 +598,26 @@ body {
 
     text-align: left;
 
+    /*background: linear-gradient(rgb(0, 0, 0) 50%, transparent 100%);*/
+
+}
+
+.title_text {
+    color: #ffffff;
+    font-family: Helvetica, sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.sub_title_text {
+    color: #ffffff;
+    font-family: Helvetica, sans-serif;
+    font-size: 32px;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 
