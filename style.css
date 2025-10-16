@@ -11,7 +11,7 @@
 
 body {
 
-    background-color: #000000;
+    background-color: #ffffff;
     /* background-image: url("res/image/field1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -594,9 +594,13 @@ body {
 
 
     
-    padding: 16px;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    padding-top: 8%;
+    padding-bottom: 16px;
 
     text-align: left;
+    justify-content: center;
 
     /*background: linear-gradient(rgb(0, 0, 0) 50%, transparent 100%);*/
 
@@ -615,6 +619,15 @@ body {
     color: #ffffff;
     font-family: Helvetica, sans-serif;
     font-size: 32px;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.text {
+    color: #8e8e8e;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
 
     margin-top: 8px;
     margin-bottom: 8px;
