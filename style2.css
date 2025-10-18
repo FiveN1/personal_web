@@ -354,7 +354,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    gap: 16px;
+    gap: 32px;
 
     width: auto;
     height: auto;
@@ -377,6 +377,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+
+    opacity: 1.0;
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+}
+.email_link:hover {
+    opacity: 0.5;
+
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
 }
 
 .github_link {
@@ -391,6 +401,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+
+    opacity: 1.0;
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+}
+.github_link:hover {
+    opacity: 0.5;
+
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
 }
 
 .youtube_link {
@@ -405,4 +425,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+
+    opacity: 1.0;
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+}
+.youtube_link:hover {
+    opacity: 0.5;
+
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
 }
