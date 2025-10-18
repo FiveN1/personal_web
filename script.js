@@ -36,6 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 }); 
 
+function copyEmail() {
+  var email = "tomas.verheyen.personal@gmail.com";
+  navigator.clipboard.writeText(email);
+  alert("Copied to clipboard: " + email);
+}
+
 
 /*
 const element = document.querySelector('.card');
