@@ -296,7 +296,19 @@ body {
 
 
     /* background image */
-    background-image: url("res/image/lion_demo_screenshot1.png");
+    background-image: url("res/image/garfield1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.main_card_thumbnail_surfacenets {
+    width: 40%;
+    height: auto;
+
+
+    /* background image */
+    background-image: url("res/image/surfacenets_screenshot1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;

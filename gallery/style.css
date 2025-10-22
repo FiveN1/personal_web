@@ -111,7 +111,7 @@ body {
     background-color: white;
 
     width: auto;
-    height: 60vh;
+    height: auto;
 
     padding-left: 12.5%;
     padding-right: 12.5%;
@@ -123,6 +123,48 @@ body {
 }
 
 
+
+.painting1 {
+    width: auto;
+    height: auto;
+
+
+    /* background image */
+    background-image: url("gallery1/res/krajina221025.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.painting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    height: auto;
+
+    padding-left: 12.5vw;
+    padding-right: 12.5vw;
+
+}
+
+.painting_image {
+    width: 100%;
+    height: auto;
+}
+
+.painting_about {
+    width: 100%;
+    height: auto;
+
+    text-align: left;
+    
+    margin-bottom: 32px;
+
+    background-color: #000000;
+}
 
 
 
