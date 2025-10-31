@@ -197,9 +197,6 @@ body {
     text-align: left;
 
     padding-top: 16px;
-
-
-
 }
 
 @keyframes main_animation {
@@ -225,16 +222,11 @@ body {
     flex-grow: 1;
 
     width: 60%;
-    /*max-width: 512px;*/
-    /*min-width: 64px;*/
     height: 40vh;
 
     overflow: auto;
 
-    border-radius: 4px;
-
-    /*background-color: rgb(255, 255, 255);*/
-
+    /* border-radius: 4px; */
 }
 
 .main_card {
@@ -258,7 +250,6 @@ body {
     
 }
 
-
 .main_card:hover {
     background-color: #ffff40; /*#e5ff00*/ /*#ffcc00*/
 
@@ -268,7 +259,6 @@ body {
     transition: background-color 0.1s;
 }
 
-
 .main_card_about {
     width: 60%;
     height: auto;
@@ -277,61 +267,13 @@ body {
     
 }
 
-
 .main_card_thumbnail {
     width: 40%;
     height: auto;
-
-
-    /* background image */
-    background-image: url("res/image/lion_demo_screenshot1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
+    object-fit: cover;
 }
 
-.main_card_thumbnail_nymphaea {
-    width: 40%;
-    height: auto;
 
-
-    /* background image */
-    background-image: url("res/image/garfield1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-}
-
-.main_card_thumbnail_surfacenets {
-    width: 40%;
-    height: auto;
-
-
-    /* background image */
-    background-image: url("res/image/surfacenets_screenshot1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-}
-
-.main_card_thumbnail_cmd_raycaster {
-    width: 40%;
-    height: auto;
-
-
-    /* background image */
-    background-image: url("res/image/cmd_raycaster_screenshot1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-}
-
-.main_card_thumbnail_gallery1 {
-    width: 40%;
-    height: auto;
-
-    background-color: black;
-}
 
 
 
