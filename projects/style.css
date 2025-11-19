@@ -222,9 +222,9 @@ body {
     flex-grow: 1;
 
     width: 60%;
-    height: 40vh;
+    height: auto; /*40vh*/
 
-    overflow: auto;
+    /* overflow: auto; */
 
     /* border-radius: 4px; */
 }
@@ -235,8 +235,8 @@ body {
     justify-content: space-between;
 
     width: auto;
-    height: auto;
-    min-height: 50%;
+    height: 200px;
+    /*min-height: 50%;*/
     background-color: #d8d8d8; /*#d8d8d8*/
 
     text-decoration: none;
@@ -316,72 +316,18 @@ body {
     text-align: center;
 }
 
-.email_link {
-
+/* other social clickable icon link*/
+.link_icon {
     width: 2rem;
     height: 2rem;
 
     text-decoration: none;
 
-    /* background image */
-    background-image: url("res/image/at-256.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-
     opacity: 1.0;
     -webkit-transition: opacity 0.1s;
     transition: opacity 0.1s;
 }
-.email_link:hover {
-    opacity: 0.5;
-
-    -webkit-transition: opacity 0.1s;
-    transition: opacity 0.1s;
-}
-
-.github_link {
-
-    width: 2rem;
-    height: 2rem;
-
-    text-decoration: none;
-
-    /* background image */
-    background-image: url("res/image/github-mark-white.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-
-    opacity: 1.0;
-    -webkit-transition: opacity 0.1s;
-    transition: opacity 0.1s;
-}
-.github_link:hover {
-    opacity: 0.5;
-
-    -webkit-transition: opacity 0.1s;
-    transition: opacity 0.1s;
-}
-
-.youtube_link {
-
-    width: 2rem;
-    height: 2rem;
-
-    text-decoration: none;
-
-    /* background image */
-    background-image: url("res/image/youtube-app-white-icon.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-
-    opacity: 1.0;
-    -webkit-transition: opacity 0.1s;
-    transition: opacity 0.1s;
-}
-.youtube_link:hover {
+.link_icon:hover {
     opacity: 0.5;
 
     -webkit-transition: opacity 0.1s;

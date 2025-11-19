@@ -23,6 +23,8 @@
 
     margin-top: 16px;
     margin-bottom: 16px;
+
+    margin-left: 16px;
 }
 
 .sub_title_text {
@@ -32,6 +34,7 @@
 
     margin-top: 8px;
     margin-bottom: 8px;
+    margin-left: 8px;
 }
 
 .sub_title_text_black {
@@ -41,6 +44,8 @@
 
     margin-top: 8px;
     margin-bottom: 8px;
+
+    margin-left: 8px;
 }
 
 .text {
@@ -50,6 +55,8 @@
 
     margin-top: 8px;
     margin-bottom: 8px;
+
+    margin-left: 8px;
 }
 
 .text_white {
@@ -59,6 +66,8 @@
 
     margin-top: 8px;
     margin-bottom: 8px;
+
+    margin-left: 8px;
 }
 
 ::selection {
@@ -119,34 +128,37 @@ body {
     text-align: left;
 
     padding-top: 16px;
+    padding-bottom: 32px;
 
 }
 
 
 
+/*
 .painting1 {
     width: auto;
     height: auto;
 
-
-    /* background image */
     background-image: url("gallery1/res/krajina221025.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
 }
+*/
 
 .painting {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    /*
     justify-content: center;
     align-items: center;
+    */
 
     width: auto;
     height: auto;
 
-    padding-left: 12.5vw;
-    padding-right: 12.5vw;
+    /*padding-left: 12.5vw;
+    padding-right: 12.5vw;*/
 
 }
 
@@ -157,11 +169,11 @@ body {
 
 .painting_about {
     width: 100%;
-    height: auto;
+    /*height: max-content;*/
 
     text-align: left;
     
-    margin-bottom: 32px;
+    /*margin-bottom: 32px;*/
 
     background-color: #000000;
 }
@@ -201,72 +213,18 @@ body {
     text-align: center;
 }
 
-.email_link {
-
+/* other social clickable icon link*/
+.link_icon {
     width: 2rem;
     height: 2rem;
 
     text-decoration: none;
 
-    /* background image */
-    background-image: url("../res/image/at-256.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-
     opacity: 1.0;
     -webkit-transition: opacity 0.1s;
     transition: opacity 0.1s;
 }
-.email_link:hover {
-    opacity: 0.5;
-
-    -webkit-transition: opacity 0.1s;
-    transition: opacity 0.1s;
-}
-
-.github_link {
-
-    width: 2rem;
-    height: 2rem;
-
-    text-decoration: none;
-
-    /* background image */
-    background-image: url("../res/image/github-mark-white.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-
-    opacity: 1.0;
-    -webkit-transition: opacity 0.1s;
-    transition: opacity 0.1s;
-}
-.github_link:hover {
-    opacity: 0.5;
-
-    -webkit-transition: opacity 0.1s;
-    transition: opacity 0.1s;
-}
-
-.youtube_link {
-
-    width: 2rem;
-    height: 2rem;
-
-    text-decoration: none;
-
-    /* background image */
-    background-image: url("../res/image/youtube-app-white-icon.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-
-    opacity: 1.0;
-    -webkit-transition: opacity 0.1s;
-    transition: opacity 0.1s;
-}
-.youtube_link:hover {
+.link_icon:hover {
     opacity: 0.5;
 
     -webkit-transition: opacity 0.1s;
