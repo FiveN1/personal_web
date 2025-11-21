@@ -1,4 +1,10 @@
 
+@property --main-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgb(151, 47, 108);
+}
+
 /*
 *
 * Text
@@ -62,20 +68,24 @@
 }
 
 ::selection {
+  background: var(--main-color);
+  color: #000000;
+  /*
   background: #ffff40;
   color: #000000;
+  */
 }
 ::-moz-selection {
-  background: #ffff40;
+  background: var(--main-color);
   color: #000000;
 }
 ::-webkit-selection {
-  background: #ffff40;
+  background: var(--main-color);
   color: #000000;
 }
 
 mark {
-    background: #ffcc00;
+    background: var(--main-color);
     color: #000000;
 }
 
@@ -122,13 +132,19 @@ body {
     top: 0px;
     width: auto;
     height: auto;
-    min-height: 40vh;
+    min-height: 100vh; /*40vh*/
     /*margin-bottom: 16px;*/
 
     /*background-color: #030061;*/ /*#030061*/ /*#61001b*/
 
-    /* gradient */
+    /* gradient 
     background: radial-gradient(circle at 30% 50%, rgb(0, 32, 128), rgb(3, 0, 97) 60%);
+    */
+    background: linear-gradient(rgba(255, 0, 150, 0.3) 80%, rgb(255, 255, 255)), url("res/image/banner-21112025.png");
+    /*background-image: url("res/image/banner-21112025.png");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
 
     padding-left: 12.5%;
     padding-right: 12.5%;
@@ -251,7 +267,8 @@ body {
 }
 
 .main_card:hover {
-    background-color: #ffff40; /*#e5ff00*/ /*#ffcc00*/
+    background-color: var(--main-color); /*#e5ff00*/ /*#ffcc00*/ /*#ffff40*/
+    
 
 
     /* hover transition */
