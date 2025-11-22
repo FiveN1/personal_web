@@ -11,6 +11,12 @@
   initial-value: rgb(175, 75, 100); /*rgb(151, 47, 108);*/
 }
 
+@property --secondary-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgb(216, 200, 210); /*rgb(151, 47, 108); rgb(216, 216, 216)*/ 
+}
+
 @property --highlight-color-primary {
   syntax: "<color>";
   inherits: false;
@@ -198,7 +204,7 @@ body {
 
 }
 
-.home_center_box {
+.home_page_center {
     width: auto;
     height: auto;
 
@@ -206,25 +212,26 @@ body {
 
 }
 
-.home_box {
-    /*
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    */
-
+.home_page {
     width: auto;
     height: auto;
     min-height: 50vh;
 
     text-align: left;
 
-    
-
     background-color: #ffffff;
 
     box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes home_page_animation {
+    from {opacity: 0.0};
+    to {opacity: 1.0};
+}
+
+/* kdyz je in view */
+.home_page.in-view {
+    animation: home_page_animation 1s ease;
 }
 
 .home_page_bar {
@@ -253,15 +260,6 @@ body {
 }
 
 
-@keyframes home_box_animation {
-    from {opacity: 0.0};
-    to {opacity: 1.0};
-}
-
-/* kdyz je in view */
-.home_box.in-view {
-    animation: home_box_animation 1s ease;
-}
 
 .home_title {
     flex-grow: 1;
@@ -373,7 +371,7 @@ body {
     width: auto;
     height: auto;
     /*min-height: 50%;*/
-    background-color: #d8d8d8; /*#d8d8d8*/
+    background-color: var(--secondary-color); /*#d8d8d8*/
 
     text-decoration: none;
 
@@ -448,8 +446,8 @@ body {
 
 /* other social clickable icon link*/
 .link_icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3vw;
+    height: 3vw;
 
     text-decoration: none;
 

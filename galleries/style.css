@@ -11,6 +11,12 @@
   initial-value: rgb(175, 75, 100); /*rgb(151, 47, 108);*/
 }
 
+@property --secondary-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgb(216, 200, 210); /*rgb(151, 47, 108); rgb(216, 216, 216)*/ 
+}
+
 @property --highlight-color-primary {
   syntax: "<color>";
   inherits: false;
@@ -164,22 +170,17 @@ body {
 .painting {
     display: flex;
     flex-direction: row;
-    /*
-    justify-content: center;
-    align-items: center;
-    */
 
     width: auto;
     height: auto;
-
-    /*padding-left: 12.5vw;
-    padding-right: 12.5vw;*/
-
 }
 
 .painting_image {
     width: 100%;
     height: auto;
+
+    /* to remove window streaching */
+    object-fit: cover;
 }
 
 .painting_about {
@@ -233,8 +234,8 @@ body {
 
 /* other social clickable icon link*/
 .link_icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3vw;
+    height: 3vw;
 
     text-decoration: none;
 
