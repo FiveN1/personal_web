@@ -206,7 +206,7 @@ body {
 .home_title {
     flex-grow: 1;
     
-    width: 60%;
+    min-width: 60%;
     min-width: 300px;
     height: auto;
 
@@ -227,7 +227,7 @@ body {
 .home_about {
     flex-grow: 1;
 
-    width: 40%;
+    min-width: 40%;
     height: auto;
 
 
