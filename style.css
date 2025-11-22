@@ -101,6 +101,40 @@
 
 /*
 *
+* marquee
+*
+*/
+
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee p {
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+
+
+
+/*
+*
 * Highlight
 *
 */
@@ -173,10 +207,12 @@ body {
 }
 
 .home_box {
+    /*
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    */
 
     width: auto;
     height: auto;
@@ -184,14 +220,38 @@ body {
 
     text-align: left;
 
-    padding: 8px;
-
     
 
     background-color: #ffffff;
 
     box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.5);
 }
+
+.home_page_bar {
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    white-space:nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.home_page_content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: auto;
+    height: auto;
+
+    padding: 8px;
+}
+
 
 @keyframes home_box_animation {
     from {opacity: 0.0};
@@ -311,7 +371,7 @@ body {
     justify-content: space-between;
 
     width: auto;
-    height: 200px;
+    height: auto;
     /*min-height: 50%;*/
     background-color: #d8d8d8; /*#d8d8d8*/
 
