@@ -121,6 +121,37 @@ mark {
 
 /*
 *
+* marquee
+*
+*/
+
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee p {
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/*
+*
 * Div
 *
 */
@@ -148,24 +179,34 @@ body {
 
     text-align: left;
 
-    padding-top: 16px;
-    padding-bottom: 32px;
+    
+    /*padding-bottom: 32px;*/
 
 }
 
+.home_page_bar {
+    width: 100%;
+    height: auto;
+    background-color: #000000;
 
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    white-space:nowrap;
+    margin: 0;
+    padding: 0;
+}
 
-/*
-.painting1 {
+.return_bome_button {
     width: auto;
     height: auto;
+    background-color: black; /*var(--secondary-color)*/
+    
 
-    background-image: url("gallery1/res/krajina221025.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
+    text-align: left;
+    margin-bottom: 32px;
 }
-*/
+
 
 .painting {
     display: flex;
@@ -173,10 +214,13 @@ body {
 
     width: auto;
     height: auto;
+
+    margin-bottom: 32px;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .painting_image {
-    width: 100%;
+    width: 60%;
     height: auto;
 
     /* to remove window streaching */
@@ -184,14 +228,14 @@ body {
 }
 
 .painting_about {
-    width: 100%;
+    width: 40%;
     /*height: max-content;*/
 
     text-align: left;
     
     /*margin-bottom: 32px;*/
 
-    background-color: #000000;
+    background-color: black; /*var(--secondary-color)*/
 }
 
 
