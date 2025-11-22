@@ -1,13 +1,31 @@
 
+/*
+*
+* variables
+*
+*/
+
 @property --main-color {
   syntax: "<color>";
   inherits: false;
-  initial-value: rgb(151, 47, 108);
+  initial-value: rgb(175, 75, 100); /*rgb(151, 47, 108);*/
+}
+
+@property --highlight-color-primary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgb(175, 75, 100); /*rgb(151, 47, 108);*/
+}
+
+@property --highlight-color-secondary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgb(0, 0, 0); 
 }
 
 /*
 *
-* Text
+* text
 *
 */
 
@@ -21,82 +39,88 @@
   src: url("res/font/Helvetica/Helvetica.ttf"); /* url of the font */
 }
 
+
 .title_text {
     color: #ffffff;
     font-family: Helvetica, sans-serif;
-    font-size: 3.5rem;
+    font-size: 8vh; /*3.5rem;*/
     font-weight: bold;
 
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin: 8px;
+}
+
+.title_text_black {
+    color: #000000;
+    font-family: Helvetica, sans-serif;
+    font-size: 8vh; /*3.5rem;*/
+    font-weight: bold;
+
+    margin: 8px;
 }
 
 .sub_title_text {
     color: #ffffff;
     font-family: Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 4vh;
 
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px;
 }
 
 .sub_title_text_black {
     color: #000000;
     font-family: Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 4vh;
 
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
-.text {
-    color: #8e8e8e;
-    font-family: Helvetica, sans-serif;
-    font-size: 1rem;
-
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px;
 }
 
 .text_white {
     color: #ffffff;
     font-family: Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 2.5vh;
 
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
-::selection {
-  background: var(--main-color);
-  color: #000000;
-  /*
-  background: #ffff40;
-  color: #000000;
-  */
-}
-::-moz-selection {
-  background: var(--main-color);
-  color: #000000;
-}
-::-webkit-selection {
-  background: var(--main-color);
-  color: #000000;
-}
-
-mark {
-    background: var(--main-color);
-    color: #000000;
+    margin: 8px;
 }
 
 .text_black {
     color: #000000;
     font-family: Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 2.5vh;
     /*text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;*/
 
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px;
+}
+
+.text_grey {
+    color: #8e8e8e;
+    font-family: Helvetica, sans-serif;
+    font-size: 2.5vh;
+
+    margin: 8px;
+}
+
+/*
+*
+* Highlight
+*
+*/
+
+::selection {
+  background: var(--highlight-color-primary);
+  color: var(--highlight-color-secondary);
+}
+::-moz-selection {
+  background: var(--highlight-color-primary);
+  color: var(--highlight-color-secondary);
+}
+::-webkit-selection {
+  background: var(--highlight-color-primary);
+  color: var(--highlight-color-secondary);
+}
+
+mark {
+    background: var(--highlight-color-primary);
+    color: var(--highlight-color-secondary);
 }
 
 /*
@@ -122,37 +146,61 @@ body {
 }
 
 .home {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /**/
-    /*gap: 1rem;*/
-
-    top: 0px;
     width: auto;
     height: auto;
-    min-height: 100vh; /*40vh*/
-    /*margin-bottom: 16px;*/
+    min-height: 100vh;
 
-    /*background-color: #030061;*/ /*#030061*/ /*#61001b*/
-
-    /* gradient 
-    background: radial-gradient(circle at 30% 50%, rgb(0, 32, 128), rgb(3, 0, 97) 60%);
-    */
-    background: linear-gradient(rgba(255, 0, 150, 0.3) 80%, rgb(255, 255, 255)), url("res/image/banner-21112025.png");
-    /*background-image: url("res/image/banner-21112025.png");*/
+    background: linear-gradient(rgba(255, 0, 150, 0.1) 80vh, rgb(255, 255, 255)), url("res/image/banner-22112025.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
 
     padding-left: 12.5%;
     padding-right: 12.5%;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    
+
 
     text-align: left;
 
+}
+
+.home_center_box {
+    width: auto;
+    height: auto;
+
+    padding-top: 25vh;
+
+}
+
+.home_box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: auto;
+    height: auto;
+    min-height: 50vh;
+
+    text-align: left;
+
+    padding: 8px;
+
+    
+
+    background-color: #ffffff;
+
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes home_box_animation {
+    from {opacity: 0.0};
+    to {opacity: 1.0};
+}
+
+/* kdyz je in view */
+.home_box.in-view {
+    animation: home_box_animation 1s ease;
 }
 
 .home_title {
@@ -162,7 +210,18 @@ body {
     min-width: 300px;
     height: auto;
 
-    padding-top: 10vh;
+
+}
+
+.home_profile_picture {
+    width: 30vh;
+    height: 30vh;
+
+    background-color: #ffffff;
+
+    outline-style: solid;
+    outline-color: #ffffff;
+    outline-width: 4px;
 }
 
 .home_about {
@@ -171,7 +230,7 @@ body {
     width: 40%;
     height: auto;
 
-    padding-top: 10vh;
+
 }
 
 @keyframes home_about_animation {
@@ -188,6 +247,7 @@ body {
     width: auto;
     height: auto;
     background-color: #ffffff;
+    /*background: linear-gradient(#ffffff 95%, #000000);*/
 
     padding-top: 16px;
     padding-bottom: 32px;
@@ -290,45 +350,38 @@ body {
     object-fit: cover;
 }
 
+/*
+*
+* Bottom
+*
+*/
 
 .bottom {
     width: auto;
     height: auto;
-    /*min-height: 40vh;*/
-    /*margin-bottom: 16px;*/
 
     background-color: #000000;
-
-    /* shadow */
-    /* box-shadow: 0px -8px 16px rgba(0, 0, 0, 0.5); */
-
-    /*box-shadow: 0px -8px 64px rgba(0, 0, 0, 0.5);*/
-
-
     
     padding-left: 12.5%;
     padding-right: 12.5%;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 
-    text-align: left;
+    text-align: center;
     justify-content: center;
-
-    /*background: linear-gradient(rgb(0, 0, 0) 50%, transparent 100%);*/
 
 }
 
 .contact {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     gap: 32px;
 
     width: auto;
     height: auto;
 
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 10vh;
 
     text-align: center;
 }
